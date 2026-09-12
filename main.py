@@ -2,8 +2,9 @@ import telebot
 from telebot import types
 from datetime import datetime
 import json
+import os
 
-BOT_TOKEN = "8822168901:AAH2RuWwO-Jy5Ai5kvEF68KrCDuf6fsg7NY"
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 ADMIN_ID = 7834320405
 CHANNEL_USERNAME = "@mhabul546"
 NOTICE_FILE = "notice.json"
