@@ -3,7 +3,7 @@ from telebot import types
 from datetime import datetime
 import json
 
-BOT_TOKEN ="8822168901:AAFR12UNn-dqcNLd8q2HzGaWx5wybxyUGIs"
+BOT_TOKEN="8822168901:AAFR12UNn-dqcNLd8q2HzGaWx5wybxyUGIs"
 ADMIN_ID = 7834320405
 CHANNEL_USERNAME = "@mhabul546"
 NOTICE_FILE = "notice.json"
