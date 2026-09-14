@@ -4,7 +4,7 @@ from datetime import datetime
 import json
 import os
 
-BOT_TOKEN = os.getenv("8822168901:AAGtxqmMpMeNa91eYeKXC6JRAVz8ZU0wNSo")
+BOT_TOKEN = os.getenv("BOT_TOKEN")
 ADMIN_ID = 7834320405
 CHANNEL_USERNAME = "@mhabul546"
 bot = telebot.TeleBot(BOT_TOKEN)
