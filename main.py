@@ -58,4 +58,38 @@ app = Application.builder().token(BOT_TOKEN).build()
 app.add_handler(CommandHandler("start", start))
 app.add_handler(CallbackQueryHandler(handle_action))
 print("Bot Running...")
-app.run_polling()
+app.run_polling() 
+
+
+
+from telegram import ReplyKeyboardMarkup
+
+ADMIN_ID = 7834320405
+
+def get_main_menu(user_id):
+    keyboard = [
+        ["👥 My Referrals", "🎯 Tasks"],
+        ["💰 Balance", "📢 Notice"],
+        ["💬 Support"]
+    ]
+    if user_id == ADMIN_ID: # শুধু তুই দেখতে পারবি
+        keyboard.append(["⚙️ Admin Panel"])
+    return ReplyKeyboardMarkup(keyboard, resize_keyboard=True)
+
+async def menu_handler(update, context):
+    text = update.message.text
+    uid = update.effective_user.id
+
+    if text == "👥 My Referrals":
+        await update.message.reply_text(f"তোমার রেফার লিংক:\nhttps://t.me/My_earningg_bot?start={uid}")
+    elif text == "🎯 Tasks":
+        await update.message.reply_text("🎯 Task Section")
+    elif text == "💰 Balance":
+        await update.message.reply_text("💰 Balance: 0৳")
+    elif text == "📢 Notice":
+        await update.message.reply_text("📢 Notice: Welcome!")
+    elif text == "💬 Support":
+        await update.message.reply_text("💬 Support: @admin")
+    elif text == "⚙️ Admin Panel":
+        if uid != ADMIN_ID: return
+        await update.message.reply_text("⚙️ Admin Panel এ স্বাগতম বস!")
