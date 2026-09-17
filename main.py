@@ -1,7 +1,7 @@
 from telegram import Update, InlineKeyboardButton, InlineKeyboardMarkup
 from telegram.ext import Application, CommandHandler, CallbackQueryHandler, ContextTypes
 
-BOT_TOKEN = "8822168901:AAGtxqmMpMeNa91eYeKXC6JRAVz8ZU0wNSo"
+BOT_TOKEN = "8822168901:AAE2BYbfdoaLuWsqzWPcbGIw3ozKWX6RJuM"
 ADMIN_ID = 7834320405
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
